@@ -3,7 +3,7 @@ import {ActivityIndicator, FlatList, Text, TouchableOpacity, View} from "react-n
 import styles from "./home.style"
 import ImageItem from "../../viewComponent/imageItem/ImageItem";
 
-export const Home = ({navigation}) => {
+export const Home = () => {
     const {items, isLoading} = useRequest({});
 
     if (isLoading) {
@@ -21,7 +21,7 @@ export const Home = ({navigation}) => {
                 data={items}
                 renderItem={({item}) => (
                     <TouchableOpacity onPress={() => {
-                        navigation.navigate('DetailScreen', {urls: item.urls.small})
+                        
                     }}>
                         <ImageItem imageUrl={item.urls.small}/>
                     </TouchableOpacity>
