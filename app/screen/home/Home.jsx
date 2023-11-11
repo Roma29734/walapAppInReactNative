@@ -5,9 +5,12 @@ import ImageItem from "../../viewComponent/imageItem/ImageItem";
 import {Link, useRouter} from "expo-router";
 
 export const Home = () => {
+//    component from expo-router
     const router = useRouter()
+//    component from response to data base
     const {items, isLoading} = useRequest({});
 
+//    displays loading fragment in data base
     if (isLoading) {
         return (
             <View style={styles.loadingAlert}>
@@ -17,20 +20,19 @@ export const Home = () => {
         )
     }
 
+//    displays images wallpaper from data base
     return (
-        <View>
+        <View style={styles.contrainer}>
             <FlatList
                 data={items}
                 renderItem={({item}) => (
                     <TouchableOpacity onPress={() =>
-                        router.push('/screen/detail/Detail')}
-                                      title="/detail/Detail"
+                        router.push({ pathname: '/screen/detail/Detail' })}
                     >
                         <ImageItem imageUrl={item.urls.small}/>
                     </TouchableOpacity>
                 )}
             />
         </View>
-
     )
 }
