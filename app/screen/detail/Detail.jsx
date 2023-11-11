@@ -7,7 +7,8 @@ export const Detail = () => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={{uri: urls}}/>
+            <Text>Detail screens</Text>
+            {/*<Image style={styles.image} source={{uri: urls}}/>*/}
         </View>
     );
 }
