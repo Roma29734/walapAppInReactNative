@@ -2,9 +2,10 @@ import useRequest from "../../dataComponent/useRequest"
 import {ActivityIndicator, FlatList, Text, TouchableOpacity, View} from "react-native";
 import styles from "./home.style"
 import ImageItem from "../../viewComponent/imageItem/ImageItem";
-import {Link} from "expo-router";
+import {Link, useRouter} from "expo-router";
 
 export const Home = () => {
+    const router = useRouter()
     const {items, isLoading} = useRequest({});
 
     if (isLoading) {
@@ -21,14 +22,14 @@ export const Home = () => {
             <FlatList
                 data={items}
                 renderItem={({item}) => (
-                    <TouchableOpacity onPress={() => {
-                        
-                    }}>
+                    <TouchableOpacity onPress={() =>
+                        router.push('/screen/detail/Detail')}
+                                      title="/detail/Detail"
+                    >
                         <ImageItem imageUrl={item.urls.small}/>
                     </TouchableOpacity>
                 )}
             />
-            <Link href="../detail/Detail.jsx">Open Detail</Link>
         </View>
 
     )

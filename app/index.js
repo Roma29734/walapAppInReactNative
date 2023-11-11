@@ -1,19 +1,20 @@
-import {View, Text, SafeAreaView, StatusBar} from "react-native";
+import {View, Text, SafeAreaView, StatusBar, Button} from "react-native";
 import React from "react";
-import {router, Stack, useRouter} from "expo-router";
+import {Link, Stack, useRouter} from "expo-router";
 import {Home} from "./screen/home/Home";
 
 const Page = () => {
-    return (<SafeAreaView style={{flex: 1, backgroundColor: "#e3aa1a"}}>
-
-            <Stack.Screen
-                options={{
-                    headerStyle: {backgroundColor: "#e3aa1a"},
-                    headerShadowVisible: false,
-                }}
-            />
-            <Home/>
-        </SafeAreaView>
+    const router = useRouter()
+    return (
+        <Home/>
+//        <View>
+//            <Button title={"press to navigate"} onPress={() => {
+//                router.push('/screen/detail/Detail')
+//            }}/>
+//            <Link href={'/prob'} asChild>
+//                <Button title="link"/>
+//            </Link>
+//        </View>
     );
 };
 
