@@ -4,6 +4,9 @@ import {Stack, useLocalSearchParams} from "expo-router";
 
 const Detail = () => {
 
+    const params = useLocalSearchParams();
+
+
     return (
         <View style={styles.container}>
             <Stack.Screen
@@ -11,8 +14,7 @@ const Detail = () => {
                     title: 'Detail'
                 }}
             />
-            <Text>Detail screens </Text>
-            {/*<Image style={styles.image} source={{uri: urls}}/>*/}
+            <Image source={{uri: params.Detail}} style={styles.image} onLoadEnd={}/>
         </View>
     );
 }

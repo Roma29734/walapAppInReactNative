@@ -28,7 +28,8 @@ export const Home = () => {
                 data={items}
                 renderItem={({item}) => (
                     <TouchableOpacity onPress={() =>
-                        router.push({ pathname: '/screen/detail/Detail' })}
+                        router.push({pathname: '/screen/detail/Detail/', params: {Detail: item.urls.full} })
+                    }
                     >
                         <ImageItem imageUrl={item.urls.small}/>
                     </TouchableOpacity>
