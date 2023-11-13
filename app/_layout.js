@@ -1,6 +1,6 @@
 import {Stack} from "expo-router";
 import {useFonts} from "expo-font";
-
+import { RootSiblingParent } from 'react-native-root-siblings';
 // this is file satisfy of expo-router
 const Layout = () => {
 
@@ -17,6 +17,7 @@ const Layout = () => {
     }
 
     return (
+        <RootSiblingParent>
         <Stack>
             <Stack.Screen
                 name="index"
@@ -29,6 +30,8 @@ const Layout = () => {
                 }}
             />
         </Stack>
+
+        </RootSiblingParent>
     )
 }
 export default Layout;
