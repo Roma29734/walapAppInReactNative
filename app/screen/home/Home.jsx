@@ -3,7 +3,6 @@ import {ActivityIndicator, FlatList, Text, TouchableOpacity, View} from "react-n
 import styles from "./home.style"
 import ImageItem from "../../viewComponent/imageItem/ImageItem";
 import {Link, useRouter} from "expo-router";
-import UpBar from "../../viewComponent/upBar/UpBar";
 
 export const Home = () => {
 //    component from expo-router
@@ -21,7 +20,7 @@ export const Home = () => {
         )
     }
 
-//    displays images wallpaper from data base
+//    displays images wallpaper from dataBase
     return (
         <View style={styles.contrainer}>
             <FlatList

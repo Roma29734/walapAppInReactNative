@@ -27,6 +27,16 @@
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
-    "scheme": "walapAppInReactNative"
+    "scheme": "walapAppInReactNative",
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(walapAppInReactNative) to access your photos.",
+          "savePhotosPermission": "Allow $(walapAppInReactNative) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
   }
 }
