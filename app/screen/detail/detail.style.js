@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
     },
     textDownload: {
         fontSize: 16,
-        top: '25%',
+        alignSelf: 'center',
+        marginVertical: 'auto',
         textAlign: 'center',
         color: '#fff',
     },
