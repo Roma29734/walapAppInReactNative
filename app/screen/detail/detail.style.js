@@ -20,12 +20,13 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginHorizontal: 'auto',
         borderRadius: 32,
-        backgroundColor: '#000000'
+        backgroundColor: '#000000',
+        flexDirection: 'row',
+        alignItems: 'center'
     },
     textDownload: {
         fontSize: 16,
-        alignSelf: 'center',
-        marginVertical: 'auto',
+        width: '100%',
         textAlign: 'center',
         color: '#fff',
     },

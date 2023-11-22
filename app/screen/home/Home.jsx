@@ -22,18 +22,19 @@ export const Home = () => {
 
 //    displays images wallpaper from dataBase
     return (
-        <View style={styles.contrainer}>
-            <FlatList
-                data={items}
-                renderItem={({item}) => (
-                    <TouchableOpacity onPress={() =>
-                        router.push({pathname: '/screen/detail/Detail/', params: {Detail: item.urls.full} })
-                    }
-                    >
-                        <ImageItem imageUrl={item.urls.small}/>
-                    </TouchableOpacity>
-                )}
-            />
-        </View>
+        <FlatList
+            style={styles.contrainer}
+            data={items}
+            renderItem={({item}) => (
+                <TouchableOpacity style={styles.item} onPress={() =>
+                    router.push({pathname: '/screen/detail/Detail/', params: {Detail: item.urls.full} })
+
+                }
+                >
+                    <ImageItem imageUrl={item.urls.small}/>
+                </TouchableOpacity>
+            )}
+            numColumns={2}
+        />
     )
 }

@@ -1,12 +1,13 @@
-import { StyleSheet } from "react-native";
+import {Dimensions, StyleSheet} from "react-native";
 
 const styles = StyleSheet.create({
     logo: {
+        alignItems: 'center',
+        justifyContent: 'center',
         flex: 1,
-        height: 350,
-        marginHorizontal: 16,
-        marginVertical: 16,
+        height: Dimensions.get('window').width / 2,
         borderRadius: 16,
+        margin: 16,
     },
     container: {
         flex: 1,

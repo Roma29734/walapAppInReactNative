@@ -1,11 +1,10 @@
-import {StyleSheet} from "react-native";
+import {Dimensions, StyleSheet} from "react-native";
 
 //  styles from homeSreen
 const styles = StyleSheet.create({
     contrainer: {
         flex: 1,
-        width: '100%',
-        height: '100%'
+        marginVertical: 20,
     },
     loadingAlert: {
         flex: 1,
@@ -15,6 +14,12 @@ const styles = StyleSheet.create({
     textMainTitle: {
         textDecorationColor: "#rererr",
         fontSize: 25,
+    },
+    item: {
+        flex: 1,
+    },
+    itemInvisible: {
+        backgroundColor: 'transparent',
     },
 })
 
