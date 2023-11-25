@@ -11,6 +11,7 @@
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
     "axios": "^1.6.0",
+    "eas-cli": "^5.9.1",
     "expo": "^49.0.17",
     "expo-camera": "~13.4.4",
     "expo-constants": "^14.4.2",

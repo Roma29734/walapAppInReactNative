@@ -19,14 +19,20 @@ const Layout = () => {
     return (
         <RootSiblingParent>
         <Stack>
+            {/*<Stack.Screen*/}
+            {/*    name="index"*/}
+            {/*    options={{*/}
+            {/*        title: 'Walap',*/}
+            {/*        headerTitleAlign: 'center',*/}
+            {/*        headerTitleStyle: {*/}
+            {/*            fontSize: 20,*/}
+            {/*        }*/}
+            {/*    }}*/}
+            {/*/>*/}
             <Stack.Screen
-                name="index"
+                name="screen/(tabsHome)"
                 options={{
-                    title: 'Walap',
-                    headerTitleAlign: 'center',
-                    headerTitleStyle: {
-                        fontSize: 20,
-                    }
+                    headerShown: false,
                 }}
             />
         </Stack>

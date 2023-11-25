@@ -1,10 +1,10 @@
 import useRequest from "../../dataComponent/useRequest"
 import {ActivityIndicator, FlatList, Text, TouchableOpacity, View} from "react-native";
-import styles from "./home.style"
+import styles from "../../viewComponent/home.style"
 import ImageItem from "../../viewComponent/imageItem/ImageItem";
 import {Link, useRouter} from "expo-router";
 
-export const Home = () => {
+const Home = () => {
 //    component from expo-router
     const router = useRouter()
 //    component from response to data base
@@ -38,3 +38,5 @@ export const Home = () => {
         />
     )
 }
+
+export default Home;

@@ -1,10 +1,10 @@
 import React from "react";
-import {Home} from "./screen/home/Home";
+import {Redirect} from "expo-router";
 
 const Page = () => {
 //on this page we display the home page
     return (
-        <Home/>
+        <Redirect href="screen/(tabsHome)"/>
     );
 };
 
